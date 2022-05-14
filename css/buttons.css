@@ -1,0 +1,104 @@
+
+.player{
+    position: relative;
+    cursor: pointer;
+}
+
+.player:hover h1{
+    visibility: visible;
+}
+.player:hover .player_buttons_container{
+    visibility: visible;
+}
+
+
+.player-progress{
+    visibility: hidden;
+    
+}
+
+.player:hover .player-progress{
+    visibility: visible;
+    
+}
+
+h1{
+    color: white;
+    position: absolute;
+    inset-inline-start: 30px;
+    visibility: hidden;
+}
+
+video{
+    aspect-ratio: 16/9;
+}
+
+.player_buttons_container{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    visibility: hidden;
+    transition: .3s visibility ;
+}
+
+button{
+    inline-size: 32px;
+    block-size: 32px ; 
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button:active{
+    transform: scale(.9);
+}
+
+#backward{
+background-image: url(../images/-10.svg);
+}
+
+#play{
+    background-image: url(../images/play.svg);
+}
+
+
+#pause{
+    background-image: url(../images/pause.svg);
+}
+
+#forward{
+    background-image: url(../images/+10.svg);
+}
+
+
+/* Option 1 */
+/* .player-progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[type="range"]{
+    width: 90%;
+    height: fit-content;
+    position: absolute;
+    bottom: 30px;
+    border: 2px solid green;
+} */
+
+
+/* Option 2 */
+.player-progress{
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;
+}
+
+.player-progress input{
+    flex: 1;
+}
