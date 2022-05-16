@@ -14,7 +14,7 @@
 
 .player-progress{
     visibility: hidden;
-    
+    transition: .3s visibility ;
 }
 
 .player:hover .player-progress{
@@ -27,6 +27,7 @@ h1{
     position: absolute;
     inset-inline-start: 30px;
     visibility: hidden;
+    transition: .3s visibility ;
 }
 
 video{
